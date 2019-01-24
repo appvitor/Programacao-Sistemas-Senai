@@ -1,0 +1,41 @@
+ Console.Title = "Números Perfeitos";
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            
+            bool Continua;
+            do
+            {
+                Console.Clear();
+                Continua = false;
+                double soma = 0;
+                int num;
+
+                Console.WriteLine("Digite um nº");
+                num = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i < num; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        soma += i;
+                    }
+                }
+
+                if (soma == num)
+                {
+                    Console.WriteLine("\r\nO nº é perfeito");
+                }
+                else
+                {
+                    Console.WriteLine("\r\nO nº não é perfeito");
+                }
+                string teste;
+               
+                Console.WriteLine("\r\nDeseja digitar outro nº? ( S/N )");
+                teste = Console.ReadLine().ToString().ToLower();
+
+                if (teste.Equals("s"))
+	            {
+                    Continua = true;
+	            }
+
+            } while (Continua);
